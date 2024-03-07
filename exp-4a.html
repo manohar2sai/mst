@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+		let x=prompt("No of Tickets?");
+		x=Number(x);
+		let total = 0;
+		document.write("<b>Your ticket Details:</b><br>")
+        document.write("Actual cost per ticket is 150<br>");
+        if(x>2 && x<6)
+        {
+            document.write("seats are available <br>");
+            let i=0;
+		    let y=5;
+            for(i=0;i<x;i++)
+            {
+			document.write("Ticket for Customer "+(i+1)+ " gets " +y+ " % discount!, cost is:"+((150)-((y/100)*150))+"<br>");
+			total+=((150)-(x*(y/100)*150))
+			y+=2;
+		    }
+		    
+        }
+        else{
+            document.write("seats are not available <br>");
+        };
+        document.write("for "+x+"tickets you need to pay: "+total+" <br>");
+		
+		
+	</script>
+    
+</body>
+</html>
